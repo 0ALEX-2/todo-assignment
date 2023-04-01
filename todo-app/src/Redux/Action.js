@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ADD_TODO, GET_TODOS,TOGGLE_TODO } from "./ActionType";
+import { ADD_TODO, DELETE_TODO, GET_TODOS,TOGGLE_TODO } from "./ActionType";
 
 const url="http://localhost:8000";
 
@@ -27,6 +27,17 @@ export const toggleTodo=(id)=>async(dispatch)=>{
     try {
         const res=await axios.get(`${url}/todos/${id}`)
         dispatch({type:TOGGLE_TODO, payload:res.data})
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//Delete Todo
+
+export const deleteTodo=(id)=>async(dispatch)=>{
+    try {
+        const res=await axios.delete(`${url}/todos/${id}`)
+        dispatch({type:DELETE_TODO, payload:res.data})
     } catch (error) {
         console.log(error);
     }

@@ -41,3 +41,15 @@ export const toggleTodoController=async(req,res)=>{
         return res.status(500).json(error.message)
     }
 }
+
+// Delete Todo
+
+export const deleteTodoController = async (req, res) => {
+    try {
+        const Todo = await todo.findByIdAndDelete(req.params.id)
+
+        return res.status(200).json(Todo);
+    } catch (error) {
+        return response.status(500).json(error.message);
+    }
+}
