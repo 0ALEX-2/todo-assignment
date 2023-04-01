@@ -3,7 +3,7 @@ import { BsTrash } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import { TiTick } from "react-icons/ti";
 import { deleteTodo, toggleTodo } from '../Redux/Action';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 
 
 const Todo = ({todo}) => {
