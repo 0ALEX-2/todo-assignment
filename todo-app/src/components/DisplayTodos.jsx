@@ -17,7 +17,7 @@ const DisplayTodos = () => {
     <div className="lg:flex lg:justify-evenly mt-[60px] pb-[100px]">
 
       {/* Active Todos */}
-      <Droppable droppableId="TodosList">
+      <Droppable droppableId="DisplayTodos">
         {(provided) => ( 
           <div
             className="border p-[10px] rounded-lg w-fit m-auto"
@@ -34,7 +34,7 @@ const DisplayTodos = () => {
       </Droppable>
 
       {/* Completed Todos  */}
-      <Droppable droppableId="TodosCompleted">
+      <Droppable droppableId="CopletedTodos">
         {(provided) => ( 
           <div
             className="mt-5 lg:mt-0 border p-[10px] rounded-lg w-fit m-auto"
