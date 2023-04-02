@@ -1,7 +1,7 @@
 import axios from "axios"
 import { ADD_TODO, DELETE_TODO, GET_TODOS,TOGGLE_TODO } from "./ActionType";
 
-const url="http://localhost:8000";
+const url="https://mern-todoapp.onrender.com";
 
 export const addTodos=(data)=>async(dispatch)=>{
     try {
